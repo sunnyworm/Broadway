@@ -26,21 +26,34 @@
   </script>
   
   <!-- <canvas id='canvas' width="640" height="100" style="background-color: #333333;"></canvas> -->
-  
+  <br>
+  <a style="font-size: 24px; padding: 20px">Broadway.js - H.264 Decoding in JavaScript</a>
   <br>
   <table>
     <tr><td>Main Thread Decoding</td><td>Worker Thread 1 Decoding</td><td>Worker Thread 2 Decoding</td></tr>
     <tr>
       <td>
-        <div class="broadway" src="mozilla_story.mp4" width="360" height="280" style="float: left; position: relative;" workers="false" render="true"></div>
+        <div class="broadway" src="tree.mp4" width="560" height="304" style="float: left; position: relative;" workers="false" render="true"></div>
       </td>
       <td>  
-        <div class="broadway" src="mozilla_story.mp4" width="360" height="280" style="float: left; position: relative;" workers="true"></div>
+        <div class="broadway" src="tree.mp4" width="560" height="304" style="float: left; position: relative;" workers="true"></div>
       </td>
       <td>  
-        <div class="broadway" src="mozilla_story.mp4" width="360" height="280" style="float: left; position: relative;" workers="true"></div>
+        <div class="broadway" src="tree.mp4" width="560" height="304" style="float: left; position: relative;" workers="true"></div>
       </td>
     </tr>
+    <tr>
+      <td>
+        
+      </td>
+      <td>  
+        <div class="broadway" src="tree.mp4" width="560" height="304" style="float: left; position: relative;" workers="true"></div>
+      </td>
+      <td>  
+        <div class="broadway" src="tree.mp4" width="560" height="304" style="float: left; position: relative;" workers="true"></div>
+      </td>
+    </tr>
+    <!--
     <tr><td></td><td>Worker Thread 1 Decoding without Rendering</td><td>Worker Thread 2 Decoding without Rendering</td></tr>
     <tr>
       <td>
@@ -52,18 +65,7 @@
         <div class="broadway" src="mozilla_story.mp4" width="360" height="280" style="float: left; position: relative;" workers="true" render="false"></div>
       </td>
     </tr>
+    -->
   </table>  
-        
-        <!-- 
-        <div width="360" height="280" style="float: left; position: relative;" workers="true">
-            <canvas width="360" height="280" style="background-color: #333333"></canvas>
-            <div style="z-index: 100; position: absolute; bottom: 0px; background-color: rgba(0,100,0,0.8); height: 30px; width: 100%; left: 0px; text-align: left;">
-            <div style="padding: 3px;">
-            FPS: AAAA
-            </div>
-            </div>
-        </div>
-        -->
-        
 </body>
 </html>

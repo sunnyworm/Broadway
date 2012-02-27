@@ -63,7 +63,7 @@ void playStream(Stream *stream) {
     do {
         u8 *start = decInput.pStream;
         u32 ret = broadwayDecode();
-        printf("Decoded Unit #%d, Size: %d, Result: %d\n", i++, (decInput.pStream - start), ret);
+        // printf("Decoded Unit #%d, Size: %d, Result: %d\n", i++, (decInput.pStream - start), ret);
     } while (decInput.dataLen > 0);
 }
 
@@ -92,13 +92,12 @@ void broadwayPlayStream() {
     playStream(&broadwayStream);
 }
 
-#ifdef LINUX
+/*
 int main(int argc, char **argv) {
-#else
-int SDL_main(int argc, char **argv) {
     playFile(argv[argc - 1]);
-#endif
+    return 0;
 }
+*/
 
 u32 broadwayInit() {
     H264SwDecRet ret;
@@ -115,13 +114,9 @@ u32 broadwayInit() {
     picDecodeNumber = picDisplayNumber = 1;
 }
 
-void broadwayOnHeadersDecoded() {
-    // printf("onStreamHeadersDecoded\n");
-}
+extern void broadwayOnHeadersDecoded();
 
-void broadwayOnPictureDecoded(u8 *buffer, u32 width, u32 height) {
-    // printf("onStreamHeadersDecoded\n");
-}
+extern void broadwayOnPictureDecoded(u8 *buffer, u32 width, u32 height);
 
 u32 broadwayDecode() {
     decInput.picId = picDecodeNumber;
