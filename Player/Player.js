@@ -204,8 +204,8 @@ p.decode(<binary>);
     if (!this._config.size){
       this._config.size = {};
     };
-    this._config.size.width = this._config.size.width || 200;
-    this._config.size.height = this._config.size.height || 200;
+    this._config.size.width = this._config.size.width || 320;
+    this._config.size.height = this._config.size.height || 240;
     
     this.canvas = document.createElement('canvas');
     this.canvas.width = this._config.size.width;
