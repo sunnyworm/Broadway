@@ -1,12 +1,15 @@
 <html>
 	<head>
 		<script type='text/javascript'>
-				this.player = new Player({
-					useWorker: true,
-					workerFile: "/lib/Broadway/Player/Decoder.js",
-					webgl: true,
-					size: info.resolution
-				});
+				this.player = new Player(
+					"https://rawgit.com/sunnyworm/Broadway/umd/Player/Player.js",
+					{
+						useWorker: true,
+						workerFile: "https://rawgit.com/sunnyworm/Broadway/umd/Player/Decoder.js",
+						webgl: true,
+						size: info.resolution
+					}
+				);
 
 			worker.onmessage = function(evt) {
 				window.top.postMessage(evt, "*")
