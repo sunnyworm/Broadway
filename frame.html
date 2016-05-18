@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<script type='text/javascript'>
+			var worker = new worker("https://cdn.rawgit.com/sunnyworm/Broadway/umd/Player/Decoder.js")
+				window.onmessage = function(evt) {
+				worker.postMessage(evt);
+			}
+
+			worker.onmessage = function(evt) {
+				window.top.postMessage(evt, "*")
+			}
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
+

@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<script type='text/javascript'>
+		window.onmessage = function(evt) {
+			alert.log("Got the message: " + evt.data);
+		}
+
+		window.onload = function() {
+			    document.getElementById("ifr").contentWindow.postMessage("a message","https://cdn.rawgit.com/sunnyworm/Broadway/umd/")
+		}
+		</script>
+	</head>
+	<body>
+	    <iframe id="ifr" src="https://cdn.rawgit.com/sunnyworm/Broadway/umd/frame.html"></iframe>
+	</body>
+</html>
